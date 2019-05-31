@@ -9,10 +9,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const graphqlLoader = require('graphql-tag/loader');
 const { minLegacySingleScriptsPlugin, minLegacyMegaScriptPlugin } = require('./legacy-config');
 const { VueLoaderPlugin } = require('vue-loader');
-
 const sectionsBase = 'core';
 const snippetsBase = 'core';
-
 const externals = {
   jquery: 'jQuery',
 };
@@ -23,7 +21,7 @@ const plugins = [
     jQuery: 'jquery',
     'window.$': 'jquery',
     'window.jQuery': 'jquery',
-    vue: 'vue/dist/vue.js'
+    Vue: 'vue/dist/vue.js'
   }),
   new CopyWebpackPlugin(
     [
